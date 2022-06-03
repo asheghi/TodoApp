@@ -2,7 +2,7 @@
   <div class="Todos">
     <div class="list">
       <div class="item" v-for="task in todos" :key="task._id" :class="{done:task.done}">
-        <input @click="toggleDone(task)" type="checkbox" >
+        <input @click="toggleDone(task)" :checked="task.done" type="checkbox" >
         <div class="name" v-text="task.name"></div>
         <button @click="removeTodo(task)" class="remove">Delete</button>
       </div>
