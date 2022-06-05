@@ -1,5 +1,5 @@
 import { ax } from "../plugins/axios";
-const project = import.meta.env.VITE_WF_PROJECT
+const project = import.meta.env.VITE_NB_PROJECT
 
 export const Api = {
   async login(payload) {

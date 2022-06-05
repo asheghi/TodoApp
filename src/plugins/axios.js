@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getAccountToken } from "../lib/auth";
 import { toast } from "./alert";
-const baseUrl = import.meta.env.VITE_WF_BASE_URL;
+const baseUrl = import.meta.env.VITE_NB_BASE_URL;
 
 export const ax = axios.create({
   baseURL: baseUrl,
