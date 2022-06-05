@@ -1,7 +1,23 @@
-# Vue 3 + Vite
+# NeoBase usage demo
+A simple todo application that uses [NeoBase](https://github.com/asheghi/NeoBase) as back-end.
+## Features
+ - [x] Authentication
+ - [x] Access Control
+ - [x] Create, Read, Update, Delete todos.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+### How to Run 
+1. login to NeoBase and create a new project, for example `TodoApp`.
+2. create a `.env` file at the root of this project.
+3. add your NeoBase instance base url and project name to `.env` file
+```shell
+VITE_NB_BASE_URL=http://localhost:7585/api/
+VITE_NB_PROJECT=TodoApp
+```
+4. install dependencies
+```shell
+npm install
+```
+5. run development server
+```shell
+npm run dev
+```
