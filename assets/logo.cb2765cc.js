@@ -1,1 +1,1 @@
-var a="/assets/logo.03d6d6da.png";export{a as l};
+var o="/TodoApp/assets/logo.03d6d6da.png";export{o as l};
