@@ -3,11 +3,11 @@
     <div class="cover">
       <img :src="logoImage" width="120" height="120" />
       <h1 class="header-text">Todo App</h1>
-      <p class="desc">
-        simple todo app built with WildFire
-      </p>
+      <p class="desc">simple todo app built with NeoBase</p>
       <router-link to="/register" class="btn"> Register </router-link>
-      <router-link to="/login" class="text-gray-400 underline underline-offset-2"
+      <router-link
+        to="/login"
+        class="text-gray-400 underline underline-offset-2"
         >already have an account</router-link
       >
     </div>

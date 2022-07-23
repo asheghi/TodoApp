@@ -7,9 +7,10 @@
         <router-link to="/dash">Todos</router-link>
       </div>
       <div class="ml-auto flex items-center gap-4 text-gray-400">
-        <div v-text="user?.email">
-        </div>
-      <router-link to="/login" class="text-red-800"  @click="logout">Logout</router-link>
+        <div v-text="user?.email"></div>
+        <router-link to="/login" class="text-red-800" @click="logout"
+          >Logout</router-link
+        >
       </div>
     </div>
     <div class="nested-route-cover">
@@ -19,22 +20,26 @@
 </template>
 
 <script>
-import { Api } from "../../lib/api";
 import { removeAccountToken } from "../../lib/auth";
+import { Auth } from "../../lib/client";
 
 export default {
-  components: {
-  },
+  components: {},
   async beforeRouteEnter(to, from, next) {
     try {
-      const { data, status } = await Api.me();
-      next(vm => {
+      const { data } = await Auth.me();
+      next((vm) => {
         vm.user = data;
       });
     } catch (e) {
       console.error(e);
       return next("/login");
     }
+  },
+  data() {
+    return {
+      user: null,
+    };
   },
   computed: {
     project() {
@@ -47,11 +52,6 @@ export default {
       this.$router.replace("/login");
     },
   },
-  data() {
-    return {
-      user: null
-    }
-  }
 };
 </script>
 

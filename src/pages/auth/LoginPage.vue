@@ -45,9 +45,8 @@
 
 <script>
 import logoImage from "../../assets/logo.png?url";
-import { ax } from "../../plugins/axios";
-import { Api } from "../../lib/api";
 import { setAccountToken } from "../../lib/auth";
+import { Auth } from "../../lib/client";
 
 export default {
   name: "LoginPage",
@@ -62,7 +61,7 @@ export default {
   },
   methods: {
     async submit() {
-      const { data } = await Api.login(this.form);
+      const { data } = await Auth.login(this.form);
       setAccountToken(data.token);
       await this.$router.replace("/dash");
     },

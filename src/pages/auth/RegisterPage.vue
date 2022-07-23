@@ -45,9 +45,8 @@
 
 <script>
 import logoImage from "../../assets/logo.png?url";
-import { ax } from "../../plugins/axios";
-import { Api } from "../../lib/api";
 import { setAccountToken } from "../../lib/auth";
+import { Auth } from "../../lib/client";
 export default {
   name: "RegisterPage",
   data() {
@@ -61,7 +60,7 @@ export default {
   },
   methods: {
     async submit() {
-      const { data, status } = await Api.register(this.form);
+      const { data } = await Auth.register(this.form);
       setAccountToken(data.token);
       await this.$router.replace("/dash");
     },
