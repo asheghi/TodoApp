@@ -1,5 +1,7 @@
-# NeoBase usage demo
-A simple todo application that uses [NeoBase](https://github.com/asheghi/NeoBase) as back-end.
+# Todo App
+A simple todo application build with vue.js and [NeoBase](https://github.com/asheghi/NeoBase) as back-end.
+
+deployed on github, [demo](https://asheghi.github.io/TodoApp/)
 ## Features
  - [x] Authentication
  - [x] Access Control
